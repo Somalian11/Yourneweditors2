@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ramses &amp; Vilte: Your New Editors</title>
+<meta name="description" content="Ramses &amp; Vilte edit social media for Michelin-starred restaurants, bars and hospitality brands. Strategy, filming, editing and posting. One deal, two editors.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<a href="#main" class="skip-link">Skip to content</a>
+<div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+
+<!-- ============================= NAV ============================= -->
+<header class="nav edge" id="siteNav">
+  <a href="#main" class="brand" aria-label="Ramses and Vilte, home">
+    <span class="brand-name"><strong>Ramses &amp; Vilte</strong><span>Your new editors</span></span>
+  </a>
+
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <nav class="nav-links" id="navLinks">
+    <a href="#work" data-close>Work</a>
+    <a href="#offer" data-close>Services</a>
+    <a href="#pricing" data-close>Pricing</a>
+    <a href="#contact-footer" data-close>Contact</a>
+    <button class="btn open-modal" data-close>Get your new editors <span class="btn-arrow">→</span></button>
+  </nav>
+</header>
+
+<main id="main">
+
+  <!-- ============================= HERO ============================= -->
+  <section class="hero">
+    <div class="hero-main">
+      <div class="hero-left">
+        <h1 class="hero-headline">
+          <span class="line"><span>Your new</span></span>
+          <span class="line"><span>editors</span></span>
+        </h1>
+        <div class="hero-lead-cta">
+          <div class="hero-byline-text">
+            <div class="hero-byline-sub">Restaurants · Bars · Hospitality</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-photos">
+        <div class="hero-photo">
+          <div class="hero-photo-frame">
+            <div class="hero-photo-code">V · 01</div>
+            <img src="images/vilte.png" alt="Vilte">
+          </div>
+          <div class="hero-photo-caption">
+            <span class="dot"></span>
+            <span class="hero-photo-name">Vilte</span>
+          </div>
+        </div>
+        <div class="hero-photo">
+          <div class="hero-photo-frame ramses-frame">
+            <div class="hero-photo-code">R · 02</div>
+            <img src="images/ramses.png" alt="Ramses">
+          </div>
+          <div class="hero-photo-caption">
+            <span class="dot"></span>
+            <span class="hero-photo-name">Ramses</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="hero-meta edge">
+    <div class="stats">
+      <div class="stat reveal">
+        <div class="stat-num"><span class="count-up" data-target="7">0</span>+</div>
+        <div class="stat-label">Years experience in social media marketing</div>
+      </div>
+      <div class="stat reveal">
+        <div class="stat-num">1+1</div>
+        <div class="stat-label">Two editors, one point of contact, always reachable</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================= OFFER ============================= -->
+  <section class="edge" id="offer">
+    <div class="offer-reels reveal">
+      <div class="offer-reel">
+        <div class="offer-reel-head">
+          <div class="name">GEM.</div>
+          <div class="tag michelin-tag">
+            <img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star">
+            <img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star">
+            <span>Restaurant</span>
+          </div>
+        </div>
+        <div class="offer-reel-video">
+          <video class="lazy-video" data-src="videos/gem-restaurant.mp4" poster="images/gem-restaurant-poster.jpg" preload="none" muted loop playsinline></video>
+          <button class="reel-mute-btn" type="button" aria-label="Unmute video" aria-pressed="false">
+            <svg class="icon-off" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5c1 1 1 6 0 7M18.5 6c2 2 2 10 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="6" x2="20" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg class="icon-on" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5c1 1 1 6 0 7M18.5 6c2 2 2 10 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="offer-reel">
+        <div class="offer-reel-head">
+          <div class="name">Les Patrons Cuisiniers</div>
+          <div class="tag">20 combined Michelin restaurants</div>
+        </div>
+        <div class="offer-reel-video">
+          <video class="lazy-video" data-src="videos/les-patrons-cuisiniers.mp4" poster="images/les-patrons-cuisiniers-poster.jpg" preload="none" muted loop playsinline></video>
+          <button class="reel-mute-btn" type="button" aria-label="Unmute video" aria-pressed="false">
+            <svg class="icon-off" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5c1 1 1 6 0 7M18.5 6c2 2 2 10 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="6" x2="20" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg class="icon-on" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5c1 1 1 6 0 7M18.5 6c2 2 2 10 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+      <div class="offer-reel">
+        <div class="offer-reel-head">
+          <div class="name">The Houseboat Family</div>
+          <div class="tag">Airbnb stay</div>
+        </div>
+        <div class="offer-reel-video">
+          <video class="lazy-video" data-src="videos/houseboat-family.mp4" poster="images/houseboat-family-poster.jpg" preload="none" muted loop playsinline></video>
+          <button class="reel-mute-btn" type="button" aria-label="Unmute video" aria-pressed="false">
+            <svg class="icon-off" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5c1 1 1 6 0 7M18.5 6c2 2 2 10 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="16" y1="6" x2="20" y2="18" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+            <svg class="icon-on" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 9v6h4l5 5V4L8 9H4Z" fill="currentColor"/><path d="M16 8.5c1 1 1 6 0 7M18.5 6c2 2 2 10 0 12" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer-how">
+      <div class="section-head reveal">
+        <h2 class="section-title">How we'll work</h2>
+        <p class="section-note">Full management or just the edit. Either way, here's exactly what happens.</p>
+      </div>
+
+      <div class="offer-list reveal">
+        <div class="offer-item">
+          <span class="offer-num">01</span>
+        <div class="offer-copy">
+          <h3>We get to know you</h3>
+          <p>Your business, your audience, and the thing you do that nobody else does. Everything we make starts there.</p>
+        </div>
+      </div>
+      <div class="offer-item">
+        <span class="offer-num">02</span>
+        <div class="offer-copy">
+          <h3>You film, or we do</h3>
+          <p>Got footage? Send it over. If not, we'll come to you and shoot it ourselves.</p>
+        </div>
+      </div>
+      <div class="offer-item">
+        <span class="offer-num">03</span>
+        <div class="offer-copy">
+          <h3>We make it look good</h3>
+          <p>Cuts, colour, sound, music. The part where footage turns into something people actually watch to the end.</p>
+        </div>
+      </div>
+      <div class="offer-item">
+        <span class="offer-num">04</span>
+        <div class="offer-copy">
+          <h3>You approve, we post</h3>
+          <p>Everything comes back to you for a final look. Then we put it live and handle the rest.</p>
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= VIDEO SHOWCASE ============================= -->
+  <section class="edge" id="work">
+    <div class="section-head section-head--divided reveal">
+      <h2 class="section-title">Got a personality?</h2>
+      <p class="section-note">We'll make sure it shows. Every video is built around your business, its personality, and the people you want walking through the door.</p>
+    </div>
+
+    <div class="video-grid reveal">
+      <div class="tile tile-reel">
+        <video class="lazy-video" data-src="videos/bij-jef.mp4" poster="images/bij-jef-poster.jpg" preload="none" muted loop playsinline></video>
+        <div class="tile-cap"><div class="name">Bij Jef</div><div class="tag michelin-tag"><img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star"><span>Restaurant</span></div></div>
+      </div>
+      <div class="tile tile-reel">
+        <video class="lazy-video" data-src="videos/gem-restaurant-2.mp4" poster="images/gem-restaurant-2-poster.jpg" preload="none" muted loop playsinline></video>
+        <div class="tile-cap"><div class="name">GEM.</div><div class="tag michelin-tag"><img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star"><img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star"><span>Restaurant</span></div></div>
+      </div>
+      <div class="tile tile-reel">
+        <video class="lazy-video" data-src="videos/bar-tancek.mp4" poster="images/bar-tancek-poster.jpg" preload="none" muted loop playsinline></video>
+        <div class="tile-cap"><div class="name">Bar Tanček</div><div class="tag">Amsterdam Bar</div></div>
+      </div>
+      <div class="tile tile-reel">
+        <video class="lazy-video" data-src="videos/houseboat-family-2.mp4" poster="images/houseboat-family-2-poster.jpg" preload="none" muted loop playsinline></video>
+        <div class="tile-cap"><div class="name">The Amsterdam Houseboat Family</div><div class="tag">Airbnb stay</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PHOTO SHOWCASE ============================= -->
+  <section class="edge">
+    <div class="carousel-strip-block reveal">
+      <div class="carousel-strip-head">
+        <div class="carousel-strip-title"><span>Daalder</span><img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star"></div>
+      </div>
+      <div class="carousel-strip">
+        <div class="carousel-frame"><img src="images/daalder-slide-01.jpg" alt="Daalder is moving slide"></div>
+        <div class="carousel-frame"><img src="images/daalder-slide-02.jpg" alt="Dish detail slide"></div>
+        <div class="carousel-frame"><img src="images/daalder-slide-03.jpg" alt="Dish overhead slide"></div>
+        <div class="carousel-frame"><img src="images/daalder-slide-04.jpg" alt="Plating slide"></div>
+        <div class="carousel-frame"><img src="images/daalder-slide-05.jpg" alt="Dish closeup slide"></div>
+        <div class="carousel-frame"><img src="images/daalder-slide-06.jpg" alt="Les Patrons Cuisiniers credit slide"></div>
+      </div>
+    </div>
+
+    <div class="photo-grid reveal">
+      <div class="tile tile-photo">
+        <img src="images/patron-events-poster.jpg" alt="Patron Events poster">
+      </div>
+      <div class="tile tile-photo">
+        <img src="images/egg-white-cocktail-post.jpg" alt="Why egg white cocktail post">
+      </div>
+      <div class="tile tile-photo">
+        <img src="images/understanding-whiskey-post.jpg" alt="Understanding whiskey post">
+      </div>
+      <div class="tile tile-photo">
+        <img src="images/citrus-cocktail-post.jpg" alt="Why citrus cocktail post">
+      </div>
+    </div>
+
+    <div class="carousel-strip-block reveal">
+      <div class="carousel-strip-head">
+        <div class="carousel-strip-title">The Amsterdam Houseboat Family</div>
+      </div>
+      <div class="carousel-strip">
+        <div class="carousel-frame"><img src="images/houseboat-slide-01.jpg" alt="Meet Michele slide"></div>
+        <div class="carousel-frame"><img src="images/houseboat-slide-02.jpg" alt="Why Amsterdam slide"></div>
+        <div class="carousel-frame"><img src="images/houseboat-slide-03.jpg" alt="Why houseboats slide"></div>
+        <div class="carousel-frame"><img src="images/houseboat-slide-04.jpg" alt="Fun fact slide"></div>
+        <div class="carousel-frame"><img src="images/houseboat-slide-05.jpg" alt="Hobbies slide"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================= PRICING ============================= -->
+  <section class="edge" id="pricing">
+    <div class="section-head section-head--divided reveal">
+      <h2 class="section-title">Pricing</h2>
+      <p class="section-note">Priced per piece, pick exactly what you need.</p>
+    </div>
+
+    <div class="pricing-carousel reveal">
+
+      <!-- Card 1: à la carte -->
+      <div class="plan">
+        <div class="plan-header">
+          <div class="plan-name-block">
+            <div class="plan-name">Our prices</div>
+            <div class="plan-name-label">Pay per video</div>
+          </div>
+          <div class="plan-notice">
+            <span class="plan-notice-dot" aria-hidden="true"></span>
+            <span>On-location filming available in <strong>Amsterdam</strong> or <strong>Vancouver</strong>.</span>
+          </div>
+        </div>
+
+        <div class="price-list">
+          <div class="price-list-head"><span>Content</span><span>Price</span></div>
+          <div class="price-row"><span class="price-row-label">Short video, 6 to 20s</span><span class="price-row-price">€50</span></div>
+          <div class="price-row"><span class="price-row-label">Short <strong class="term-hp">high-production</strong> video, 6 to 20s</span><span class="price-row-price">€100</span></div>
+          <div class="price-row"><span class="price-row-label">Long video, 20 to 60s</span><span class="price-row-price">€100</span></div>
+          <div class="price-row"><span class="price-row-label">Long <strong class="term-hp">high-production</strong> video, 20 to 60s</span><span class="price-row-price">€150</span></div>
+          <div class="price-row"><span class="price-row-label">Overlapping carousel</span><span class="price-row-price">€50</span></div>
+          <div class="price-row"><span class="price-row-label">Single photo post</span><span class="price-row-price">€25</span></div>
+          <div class="price-row"><span class="price-row-label">Filming day, on location</span><span class="price-row-price">Quote</span></div>
+        </div>
+
+        <div class="plan-notes">
+          <p><strong>+ €50</strong> if the edit needs audio work on someone talking to camera.</p>
+          <p><strong class="term-hp">High-production</strong> means heavy stabilisation and colour work, VFX like transitions, grids, speed changes, zooms, text or SFX, or sifting through a lot of footage.</p>
+          <p><strong>Filming day</strong> is priced per shoot after a short briefing about the venue and shot list. Videos longer than 1 minute are quoted after a briefing.</p>
+        </div>
+
+        <button class="plan-cta open-modal">Get a quote</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============================= CLOSING VIDEO ============================= -->
+  <div class="close-video reveal">
+    <video src="videos/olde-marckt.mp4" poster="images/olde-marckt-poster.jpg" autoplay muted loop playsinline></video>
+    <div class="close-video-label michelin-tag">
+      <img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star">
+      <span>Olde Marckt · Restaurant</span>
+    </div>
+    <div class="close-video-overlay">
+      <h2>Your new editors are ready when you are.</h2>
+    </div>
+  </div>
+
+  <!-- ============================= CTA BAND ============================= -->
+  <section class="edge cta-band">
+    <div class="cta-band-inner">
+      <p class="reveal">Tell us about your restaurant, bar or stay. We'll get back within a day.</p>
+      <button class="btn open-modal reveal">Get your new editors <span class="btn-arrow">→</span></button>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================= FOOTER ============================= -->
+<footer class="edge" id="contact-footer">
+  <div class="footer-left">
+    <div class="brand-name"><strong>Ramses &amp; Vilte</strong><span>hello@ramsesandvilte.com</span></div>
+  </div>
+  <div class="footer-links">
+    <a href="#work">Work</a>
+    <a href="#offer">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+  </div>
+  <div class="footer-meta">© 2026 Ramses &amp; Vilte, Social Edit Studio. All rights reserved.</div>
+</footer>
+
+<!-- ============================= MODAL ============================= -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="form-body" id="formBody">
+      <div class="modal-head">
+        <h3 id="modalTitle">Get your new editors</h3>
+        <button class="modal-close" id="modalClose" aria-label="Close form">&times;</button>
+      </div>
+      <p class="lead">Tell us about your venue. We'll reply within a day with next steps.</p>
+
+      <form id="leadForm">
+        <div class="field">
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" type="text" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="f-venue">Restaurant / bar / venue name</label>
+          <input id="f-venue" name="venue" type="text" required>
+        </div>
+        <div class="field">
+          <label for="f-ig">Instagram handle</label>
+          <input id="f-ig" name="instagram" type="text" placeholder="@yourvenue">
+        </div>
+        <div class="field">
+          <label for="f-email">Email</label>
+          <input id="f-email" name="email" type="email" required autocomplete="email">
+        </div>
+        <div class="field">
+          <label for="f-message">What are you looking for?</label>
+          <textarea id="f-message" name="message" placeholder="e.g. full social management, a launch reel, a monthly retainer..."></textarea>
+        </div>
+        <button type="submit" class="btn">Send it over <span class="btn-arrow">→</span></button>
+      </form>
+    </div>
+
+    <div class="success-state" id="successState">
+      <div class="tile-play" style="border-color:white; margin-bottom:20px;"></div>
+      <h4>We've got it.</h4>
+      <p>Expect an email from us within a day. In the meantime, follow along on Instagram.</p>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
