@@ -1,5 +1,17 @@
 (function(){
 
+  /* ---------- force page to open at the very top ---------- */
+  /* Mobile browsers sometimes restore the last scroll position when a
+     link is reopened (especially after backgrounding the tab or coming
+     back via history), which makes the page look like it "starts" a bit
+     lower than the top. Unless the URL is deliberately pointing at a
+     section (a #hash), always land at the top. */
+  if('scrollRestoration' in history){ history.scrollRestoration = 'manual'; }
+  if(!window.location.hash){
+    window.scrollTo(0, 0);
+    window.addEventListener('load', function(){ window.scrollTo(0, 0); });
+  }
+
   /* ---------- pricing tabs / swipeable carousel ---------- */
   var carousel = document.querySelector('.pricing-carousel');
   var tabs = document.querySelectorAll('.pricing-tab');
@@ -219,9 +231,21 @@
     if(!video || video.tagName !== 'VIDEO') return;
     btn.addEventListener('click', function(e){
       e.stopPropagation();
-      video.muted = !video.muted;
-      btn.setAttribute('aria-pressed', video.muted ? 'false' : 'true');
-      btn.setAttribute('aria-label', video.muted ? 'Unmute video' : 'Mute video');
+      var nowMuted = !video.muted;
+      video.muted = nowMuted;
+      if(nowMuted){
+        video.setAttribute('muted', '');
+      } else {
+        // some mobile browsers key their audio policy off the HTML
+        // attribute as well as the JS property, and want an explicit
+        // play() call inside the same tap to actually start the audio
+        video.removeAttribute('muted');
+        video.volume = 1;
+        var p = video.play();
+        if(p !== undefined) p.catch(function(){});
+      }
+      btn.setAttribute('aria-pressed', nowMuted ? 'false' : 'true');
+      btn.setAttribute('aria-label', nowMuted ? 'Unmute video' : 'Mute video');
     });
   });
 

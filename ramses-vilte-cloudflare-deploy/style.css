@@ -481,11 +481,11 @@
   }
   .close-video video{ width:100%; height:100%; object-fit:cover; display:block; }
   .close-video-label{
-    position:absolute; top:14px; left:14px; z-index:3;
-    padding:6px 11px; background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
-    font-size:12px; font-weight:500; color:var(--white); letter-spacing:.02em;
+    position:absolute; top:12px; left:12px; z-index:3;
+    padding:5px 9px; background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
+    font-size:11px; font-weight:500; color:var(--white); letter-spacing:.02em;
   }
-  .close-video-label .michelin-icon{ width:13px; height:13px; }
+  .close-video-label .michelin-icon{ width:12px; height:12px; }
   .close-video-overlay{
     position:absolute; inset:0; z-index:2;
     display:flex; align-items:center; justify-content:flex-start;
@@ -494,17 +494,16 @@
   }
   .close-video-overlay h2{
     color:var(--white); font-family:var(--font-display); font-weight:400;
-    font-size:clamp(30px, 5.6vw, 84px); line-height:.96; letter-spacing:-.01em;
-    max-width:14ch; text-transform:uppercase; margin:0;
+    font-size:clamp(22px, 3.6vw, 56px); line-height:1; letter-spacing:-.01em;
+    max-width:16ch; text-transform:uppercase; margin:0; text-align:left;
   }
   @media (max-width:700px){
-    .close-video{ aspect-ratio:4/5; }
-    .close-video video{ object-position:54% center; }
+    .close-video{ aspect-ratio:16/9; }
     .close-video-overlay{
       background:linear-gradient(0deg, rgba(0,0,0,.85) 0%, rgba(0,0,0,.3) 55%, transparent 100%);
       align-items:flex-end; justify-content:flex-start;
     }
-    .close-video-overlay h2{ max-width:none; }
+    .close-video-overlay h2{ max-width:13ch; font-size:clamp(18px, 6vw, 26px); text-align:left; }
   }
 
   .offer-list{
