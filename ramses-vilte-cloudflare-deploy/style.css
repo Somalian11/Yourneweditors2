@@ -316,6 +316,20 @@
     color:var(--white); line-height:1;
   }
 
+  .hero-photo-social{
+    position:absolute; left:8%; bottom:16px; z-index:2;
+    display:inline-flex; align-items:center; gap:5px;
+    padding:6px 10px; max-width:64%;
+    background:rgba(0,0,0,.55); backdrop-filter:blur(3px);
+    border:1px solid rgba(255,255,255,.22);
+    font-size:11px; font-weight:500; color:var(--white);
+    text-decoration:none;
+    transition:background-color .3s var(--ease);
+  }
+  .hero-photo-social:hover{ background:rgba(0,0,0,.8); }
+  .hero-photo-social svg{ width:13px; height:13px; flex-shrink:0; }
+  .hero-photo-social span{ white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+
   .hero-photo-label{ display:none; }
 
   @keyframes fadeUp{ to{ opacity:1; transform:translateY(0); } }
@@ -473,7 +487,7 @@
 
   /* -------- closing wide video block (below pricing) -------- */
   .close-video{
-    position:relative; width:100%; aspect-ratio:2.6/1;
+    position:relative; width:100%; aspect-ratio:3.4/1;
     overflow:hidden; background:#0d0d0d;
     border-top:1px solid rgba(255,255,255,.14);
     border-bottom:1px solid rgba(255,255,255,.14);
@@ -481,11 +495,11 @@
   }
   .close-video video{ width:100%; height:100%; object-fit:cover; display:block; }
   .close-video-label{
-    position:absolute; top:12px; left:12px; z-index:3;
-    padding:5px 9px; background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
-    font-size:11px; font-weight:500; color:var(--white); letter-spacing:.02em;
+    position:absolute; top:14px; left:14px; z-index:3;
+    padding:6px 11px; background:rgba(0,0,0,.6); backdrop-filter:blur(4px);
+    font-size:13px; font-weight:500; color:var(--white); letter-spacing:.02em;
   }
-  .close-video-label .michelin-icon{ width:12px; height:12px; }
+  .close-video-label .michelin-icon{ width:14px; height:14px; }
   .close-video-overlay{
     position:absolute; inset:0; z-index:2;
     display:flex; align-items:center; justify-content:flex-start;
@@ -494,7 +508,7 @@
   }
   .close-video-overlay h2{
     color:var(--white); font-family:var(--font-display); font-weight:400;
-    font-size:clamp(22px, 3.6vw, 56px); line-height:1; letter-spacing:-.01em;
+    font-size:clamp(26px, 4.6vw, 68px); line-height:1; letter-spacing:-.01em;
     max-width:16ch; text-transform:uppercase; margin:0; text-align:left;
   }
   @media (max-width:700px){
@@ -616,6 +630,29 @@
   .carousel-strip::-webkit-scrollbar{ height:5px; }
   .carousel-strip::-webkit-scrollbar-track{ background:rgba(255,255,255,.06); }
   .carousel-strip::-webkit-scrollbar-thumb{ background:rgba(255,255,255,.25); }
+
+  /* small nudging arrow hinting the strip scrolls sideways; clickable to
+     jump straight to the end, fades out via JS once the strip is actually
+     scrolled by any means */
+  .carousel-strip-wrap{ position:relative; }
+  .carousel-scroll-hint{
+    position:absolute; top:50%; right:10px; margin-top:-5px;
+    transform:translateY(-50%);
+    width:36px; height:36px; border-radius:50%;
+    background:rgba(0,0,0,.55); backdrop-filter:blur(3px);
+    border:1px solid rgba(255,255,255,.25);
+    display:flex; align-items:center; justify-content:center;
+    cursor:pointer; z-index:3; padding:0;
+    opacity:1; transition:opacity .5s var(--ease), background-color .3s var(--ease), transform .3s var(--ease);
+    animation:carouselHintNudge 1.6s ease-in-out infinite;
+  }
+  .carousel-scroll-hint:hover{ background:rgba(0,0,0,.8); }
+  .carousel-scroll-hint:active{ transform:translateY(-50%) scale(.92); }
+  .carousel-scroll-hint.is-hidden{ opacity:0; pointer-events:none; }
+  @keyframes carouselHintNudge{
+    0%, 100%{ transform:translateY(-50%) translateX(0); }
+    50%{ transform:translateY(-50%) translateX(5px); }
+  }
 
   .carousel-frame{
     flex:0 0 auto; height:clamp(210px, 32vw, 340px); aspect-ratio:4/5;

@@ -225,6 +225,20 @@
     });
   });
 
+  /* ---------- carousel scroll hint ---------- */
+  document.querySelectorAll('.carousel-strip-wrap').forEach(function(wrap){
+    var strip = wrap.querySelector('.carousel-strip');
+    var hint = wrap.querySelector('.carousel-scroll-hint');
+    if(!strip || !hint) return;
+    strip.addEventListener('scroll', function(){
+      hint.classList.add('is-hidden');
+    }, { once:true, passive:true });
+    hint.addEventListener('click', function(){
+      hint.classList.add('is-hidden');
+      strip.scrollTo({ left: strip.scrollWidth - strip.clientWidth, behavior:'smooth' });
+    });
+  });
+
   /* ---------- reel mute/unmute toggle ---------- */
   document.querySelectorAll('.reel-mute-btn').forEach(function(btn){
     var video = btn.previousElementSibling;
@@ -310,8 +324,29 @@
 
   leadForm.addEventListener('submit', function(e){
     e.preventDefault();
-    // NOTE: hook this up to a form backend (e.g. Formspree, Basin, your own endpoint)
-    // to actually receive submissions. Currently this only shows a confirmation state.
+    var name = leadForm.name.value.trim();
+    var venue = leadForm.venue.value.trim();
+    var instagram = leadForm.instagram.value.trim();
+    var email = leadForm.email.value.trim();
+    var message = leadForm.message.value.trim();
+
+    var subject = 'New enquiry from ' + (venue || name || 'website visitor');
+    var body = [
+      'Name: ' + name,
+      'Venue: ' + venue,
+      'Instagram: ' + (instagram || '-'),
+      'Email: ' + email,
+      '',
+      'What they\'re looking for:',
+      message || '-'
+    ].join('\n');
+
+    var mailtoUrl = 'mailto:vilte.kuz@gmail.com'
+      + '?subject=' + encodeURIComponent(subject)
+      + '&body=' + encodeURIComponent(body);
+
+    window.location.href = mailtoUrl;
+
     formBody.classList.add('hidden');
     successState.classList.add('show');
   });

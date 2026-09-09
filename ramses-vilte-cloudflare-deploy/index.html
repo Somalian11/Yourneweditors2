@@ -27,7 +27,7 @@
 
   <nav class="nav-links" id="navLinks">
     <a href="#work" data-close>Work</a>
-    <a href="#offer" data-close>Services</a>
+    <a href="#info" data-close>Info</a>
     <a href="#pricing" data-close>Pricing</a>
     <a href="#contact-footer" data-close>Contact</a>
     <button class="btn open-modal" data-close>Get your new editors <span class="btn-arrow">→</span></button>
@@ -56,6 +56,10 @@
           <div class="hero-photo-frame">
             <div class="hero-photo-code">V · 01</div>
             <img src="images/vilte.png" alt="Vilte">
+            <a class="hero-photo-social" href="https://www.instagram.com/vilte_kuz/" target="_blank" rel="noopener">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4.2" stroke="currentColor" stroke-width="1.6"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg>
+              <span>100k+ on Instagram</span>
+            </a>
           </div>
           <div class="hero-photo-caption">
             <span class="dot"></span>
@@ -138,7 +142,7 @@
       </div>
     </div>
 
-    <div class="offer-how">
+    <div class="offer-how" id="info">
       <div class="section-head reveal">
         <h2 class="section-title">How we'll work</h2>
         <p class="section-note">Full management or just the edit. Either way, here's exactly what happens.</p>
@@ -226,13 +230,18 @@
       <div class="carousel-strip-head">
         <div class="carousel-strip-title"><span>Daalder</span><img class="michelin-icon" src="images/michelin-star.png" alt="Michelin star"></div>
       </div>
-      <div class="carousel-strip">
-        <div class="carousel-frame"><img src="images/daalder-slide-01.jpg" alt="Daalder is moving slide"></div>
-        <div class="carousel-frame"><img src="images/daalder-slide-02.jpg" alt="Dish detail slide"></div>
-        <div class="carousel-frame"><img src="images/daalder-slide-03.jpg" alt="Dish overhead slide"></div>
-        <div class="carousel-frame"><img src="images/daalder-slide-04.jpg" alt="Plating slide"></div>
-        <div class="carousel-frame"><img src="images/daalder-slide-05.jpg" alt="Dish closeup slide"></div>
-        <div class="carousel-frame"><img src="images/daalder-slide-06.jpg" alt="Les Patrons Cuisiniers credit slide"></div>
+      <div class="carousel-strip-wrap">
+        <div class="carousel-strip">
+          <div class="carousel-frame"><img src="images/daalder-slide-01.jpg" alt="Daalder is moving slide"></div>
+          <div class="carousel-frame"><img src="images/daalder-slide-02.jpg" alt="Dish detail slide"></div>
+          <div class="carousel-frame"><img src="images/daalder-slide-03.jpg" alt="Dish overhead slide"></div>
+          <div class="carousel-frame"><img src="images/daalder-slide-04.jpg" alt="Plating slide"></div>
+          <div class="carousel-frame"><img src="images/daalder-slide-05.jpg" alt="Dish closeup slide"></div>
+          <div class="carousel-frame"><img src="images/daalder-slide-06.jpg" alt="Les Patrons Cuisiniers credit slide"></div>
+        </div>
+        <button type="button" class="carousel-scroll-hint" aria-label="Scroll to see more">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </div>
 
@@ -255,12 +264,17 @@
       <div class="carousel-strip-head">
         <div class="carousel-strip-title">The Amsterdam Houseboat Family</div>
       </div>
-      <div class="carousel-strip">
-        <div class="carousel-frame"><img src="images/houseboat-slide-01.jpg" alt="Meet Michele slide"></div>
-        <div class="carousel-frame"><img src="images/houseboat-slide-02.jpg" alt="Why Amsterdam slide"></div>
-        <div class="carousel-frame"><img src="images/houseboat-slide-03.jpg" alt="Why houseboats slide"></div>
-        <div class="carousel-frame"><img src="images/houseboat-slide-04.jpg" alt="Fun fact slide"></div>
-        <div class="carousel-frame"><img src="images/houseboat-slide-05.jpg" alt="Hobbies slide"></div>
+      <div class="carousel-strip-wrap">
+        <div class="carousel-strip">
+          <div class="carousel-frame"><img src="images/houseboat-slide-01.jpg" alt="Meet Michele slide"></div>
+          <div class="carousel-frame"><img src="images/houseboat-slide-02.jpg" alt="Why Amsterdam slide"></div>
+          <div class="carousel-frame"><img src="images/houseboat-slide-03.jpg" alt="Why houseboats slide"></div>
+          <div class="carousel-frame"><img src="images/houseboat-slide-04.jpg" alt="Fun fact slide"></div>
+          <div class="carousel-frame"><img src="images/houseboat-slide-05.jpg" alt="Hobbies slide"></div>
+        </div>
+        <button type="button" class="carousel-scroll-hint" aria-label="Scroll to see more">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none"><path d="M9 6l6 6-6 6" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
       </div>
     </div>
   </section>
@@ -339,11 +353,11 @@
   </div>
   <div class="footer-links">
     <a href="#work">Work</a>
-    <a href="#offer">Services</a>
+    <a href="#info">Info</a>
     <a href="#pricing">Pricing</a>
     <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
   </div>
-  <div class="footer-meta">© 2026 Ramses &amp; Vilte, Social Edit Studio. All rights reserved.</div>
+  <div class="footer-meta">© 2026 Ramses &amp; Vilte. Your new editors.</div>
 </footer>
 
 <!-- ============================= MODAL ============================= -->
@@ -383,8 +397,8 @@
 
     <div class="success-state" id="successState">
       <div class="tile-play" style="border-color:white; margin-bottom:20px;"></div>
-      <h4>We've got it.</h4>
-      <p>Expect an email from us within a day. In the meantime, follow along on Instagram.</p>
+      <h4>Almost there.</h4>
+      <p>Your email app should have opened with your message ready to go to Vilte. Hit send there, and expect a reply within a day.</p>
     </div>
   </div>
 </div>
